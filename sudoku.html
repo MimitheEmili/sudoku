@@ -11,19 +11,33 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f5f5f5;
+    background-color: #fdcfff;
     margin: 0;
     font-family: Arial, sans-serif;
+}
+
+h2{
+    color: #ff0392;
+    font-size: 60px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+p{
+    color: #ff0392;
+    text-decoration-line: underline;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
 td {
     width: 50px;
     height: 50px;
-    border: 1px solid #000;
+    border: 3px solid #f67efc;
     text-align: center;
     vertical-align: middle;
     font-size: 20px;
-}
+}   
 td input {
     width: 80%;
     height: 100%;
@@ -31,6 +45,7 @@ td input {
     text-align: center;
     font-size: 20px;
     outline: none;
+    background-color: #fdcfff;
 }
 .container {
     text-align: center;
@@ -49,7 +64,12 @@ table {
 button {
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 30px;
+    width: 250px;
+    height: 100px;
+    background-color: #b004bd;
+    color: #e18dfc;
+    border: #b573eb;
 }
 
 
@@ -62,11 +82,11 @@ button {
 }
 
 .thick-border-right {
-    border-right: 3px solid #000;
+    border-right: 6px solid #f67efc;
 }
 
 .thick-border-bottom {
-    border-bottom: 3px solid #000;
+    border-bottom: 6px solid #f67efc;
 }
         
     </style>
@@ -75,7 +95,7 @@ button {
     <div class="container">
         <div class="instructions">
             <h2>SudokUwU</h2>
-            <p>Tudod a szabályt, csak csináld</p>
+            <p>Tudod a szabályt, csak csináld:</p>
         </div>
         <div class="sudoku-container">
             <table id="sudoku-board"></table>
@@ -173,9 +193,9 @@ function validateNumber(row, col, num) {
 
 function resetBoard() {
     const board = document.getElementById('sudoku-board');
-    board.innerHTML = ''; // Töröljük a jelenlegi táblát
-    createBoard(); // Újra létrehozzuk az eredeti táblát
-    document.getElementById('message').innerText = ''; // Töröljük az üzenetet
+    board.innerHTML = ''; 
+    createBoard(); 
+    document.getElementById('message').innerText = ''; 
 }
 
 
